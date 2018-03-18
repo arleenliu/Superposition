@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
         let navController = UINavigationController()
-        let landingView = OrderViewController()
+        let landingView = BotViewController()
         navController.viewControllers = [landingView]
         self.window!.rootViewController = navController
+        
             
         self.window?.makeKeyAndVisible()
         return true
