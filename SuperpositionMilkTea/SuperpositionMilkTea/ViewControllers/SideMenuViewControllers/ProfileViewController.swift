@@ -13,6 +13,7 @@ class ProfileViewController : UIViewController /*UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Profile"
     }
     
 }

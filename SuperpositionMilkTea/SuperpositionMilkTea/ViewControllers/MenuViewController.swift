@@ -102,31 +102,31 @@ class MenuViewController : UIViewController, UITableViewDelegate, UITableViewDat
    
     func setupSettingsButton() {
         let settingsButton = UIButton(frame: CGRect(x: 0, y: UIScreen.main.bounds.height * 4/12, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 1/12))
-        
+
         //orderButton.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
         settingsButton.setTitleColor(UIColor.black, for: .normal)
         settingsButton.backgroundColor = UIColor.green
         settingsButton.layer.cornerRadius = 3.0
         settingsButton.setTitle(entries[3].0, for: .normal)
         settingsButton.addTarget(self, action: #selector(buttonTapped4), for: .touchUpInside)
-        
+
         entries[3].1 = settingsButton
-        
+
         self.view.addSubview(settingsButton)
     }
-    
+
     func setupLogoutButton() {
         let logoutButton = UIButton(frame: CGRect(x: 0, y: UIScreen.main.bounds.height * 5/12, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 1/12))
-        
+
         //orderButton.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
         logoutButton.setTitleColor(UIColor.black, for: .normal)
         logoutButton.backgroundColor = UIColor.green
         logoutButton.layer.cornerRadius = 3.0
         logoutButton.setTitle(entries[4].0, for: .normal)
         logoutButton.addTarget(self, action: #selector(buttonTapped5), for: .touchUpInside)
-        
+
         entries[4].1 = logoutButton
-        
+
         self.view.addSubview(logoutButton)
     }
     
@@ -134,19 +134,24 @@ class MenuViewController : UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @objc func buttonTapped1() {
-        navigationController?.popViewController(animated: true)
+        let entryViewController = OrderViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     @objc func buttonTapped2() {
-        navigationController?.popViewController(animated: true)
+        let entryViewController = ProfileViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     @objc func buttonTapped3() {
-        navigationController?.popViewController(animated: true)
+        let entryViewController = BrowseViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     @objc func buttonTapped4() {
-        navigationController?.popViewController(animated: true)
+        let entryViewController = SettingsViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     @objc func buttonTapped5() {
-        navigationController?.popViewController(animated: true)
+        let entryViewController = LogoutViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     
     
