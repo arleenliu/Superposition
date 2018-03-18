@@ -13,7 +13,14 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     var submitButton = UIButton()
     var mediumButton = UIButton()
     var plainButton = UIButton()
+    var smallButton = UIButton()
+    var largeButton = UIButton()
+    var passionFruitButton = UIButton()
+    var earlGreyButton = UIButton()
+    var nextButton = UIButton()
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Your Order"
@@ -21,8 +28,10 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
         setupLabels()
         setupSlider()
         setupPlainButton()
-        setupSizeButton()
-        setupNextButton()
+        setupSmallButton()
+        setupLargeButton()
+        setupPassionFruitButton()
+        setupEarlGreyButton()
         
     }
     
@@ -77,13 +86,51 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     
     func setupNextButton() {
-        plainButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
+        nextButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
+        nextButton.backgroundColor = UIColor.blue
+        nextButton.layer.cornerRadius = 3.0
+        nextButton.setTitle("Next", for: .normal)
+       // nextButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        self.view.addSubview(nextButton)
+        
+    }
+    
+    func setupSmallButton() {
+        smallButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
+        smallButton.backgroundColor = UIColor.blue
+        smallButton.layer.cornerRadius = 3.0
+        smallButton.setTitle("Small", for: .normal)
+       // smallButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        self.view.addSubview(smallButton)
+    }
+    
+    func setupLargeButton() {
+        largeButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
         plainButton.backgroundColor = UIColor.blue
         plainButton.layer.cornerRadius = 3.0
         plainButton.setTitle("Next", for: .normal)
-        plainButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        //plainButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
         self.view.addSubview(plainButton)
     }
+    
+    func setupPassionFruitButton() {
+        passionFruitButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
+        passionFruitButton.backgroundColor = UIColor.blue
+        passionFruitButton.layer.cornerRadius = 3.0
+        passionFruitButton.setTitle("Next", for: .normal)
+        //passionFruitButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        self.view.addSubview(passionFruitButton)
+    }
+    
+    func setupEarlGreyButton() {
+        earlGreyButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
+        earlGreyButton.backgroundColor = UIColor.blue
+        earlGreyButton.layer.cornerRadius = 3.0
+        earlGreyButton.setTitle("Next", for: .normal)
+        //earlGreyButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        self.view.addSubview(earlGreyButton)
+    }
+    
     
     // MARK: Selectors
     @objc func sliderValueChanged(_ sender: UISlider!) {

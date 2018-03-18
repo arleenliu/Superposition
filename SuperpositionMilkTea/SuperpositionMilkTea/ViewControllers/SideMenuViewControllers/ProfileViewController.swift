@@ -50,7 +50,7 @@ class ProfileViewController : UIViewController /*UITableViewDelegate, UITableVie
         let saved = UIButton(frame: CGRect(x: UIScreen.main.bounds.width*5/20, y: UIScreen.main.bounds.height * (15/20), width: UIScreen.main.bounds.width*5/10, height: UIScreen.main.bounds.height*1/10))
         
         saved.setTitleColor(UIColor.black, for: .normal)
-        saved.backgroundColor = UIColor.green
+        saved.backgroundColor = UIColor.cyan
         saved.layer.cornerRadius = 3.0
         saved.setTitle("Saved Drinks", for: .normal)
         self.view.addSubview(saved)

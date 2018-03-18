@@ -41,7 +41,14 @@ class BrowseViewController : UIViewController, UITableViewDelegate, UITableViewD
         let entry = recent[indexPath.row]
         let cell = UITableViewCell()
         cell.textLabel?.text = entry
-        cell.backgroundColor = UIColor.green
+        
+        
+        if (indexPath.row%2 == 0){
+            cell.backgroundColor = UIColor.lightGray
+        } else{
+            cell.backgroundColor = UIColor.purple
+        }
+        
         return cell
     }
     
