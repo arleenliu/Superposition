@@ -13,6 +13,11 @@ class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Confirmation"
+        
+        let centerMessage = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        
+        
     }
     
 }
