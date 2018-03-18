@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
         let navController = UINavigationController()
-        let landingView = InitChoiceViewController()
+        let landingView = OrderViewController()
         navController.viewControllers = [landingView]
         self.window!.rootViewController = navController
             
