@@ -28,6 +28,9 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
         setupLabels()
         setupSlider()
         setupPlainButton()
+        setupNextButton()
+        setupSizeButton()
+        
         setupSmallButton()
         setupLargeButton()
         setupPassionFruitButton()
@@ -90,7 +93,7 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
         nextButton.backgroundColor = UIColor.blue
         nextButton.layer.cornerRadius = 3.0
         nextButton.setTitle("Next", for: .normal)
-       // nextButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
         self.view.addSubview(nextButton)
         
     }
