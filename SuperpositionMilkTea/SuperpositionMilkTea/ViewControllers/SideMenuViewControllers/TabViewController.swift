@@ -1,5 +1,5 @@
 //
-//  ConfirmViewController.swift
+//  TabViewController.swift
 //  SuperpositionMilkTea
 //
 //  Created by Jannie Zhong on 3/17/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class TabViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()

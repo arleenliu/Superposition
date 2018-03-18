@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
-public class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
 }

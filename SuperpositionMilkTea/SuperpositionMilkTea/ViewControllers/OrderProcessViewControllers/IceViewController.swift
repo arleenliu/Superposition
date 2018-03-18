@@ -1,15 +1,15 @@
 //
-//  ConfirmViewController.swift
+//  IceViewController.swift
 //  SuperpositionMilkTea
 //
-//  Created by Jannie Zhong on 3/17/18.
+//  Created by Arleen Liu on 3/17/18.
 //  Copyright © 2018 Jannie Zhong. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class IceViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()

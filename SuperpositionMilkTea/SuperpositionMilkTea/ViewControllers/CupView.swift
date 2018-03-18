@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
+    
+    
+}
