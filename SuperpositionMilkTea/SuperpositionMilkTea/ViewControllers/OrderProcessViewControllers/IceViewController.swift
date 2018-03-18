@@ -28,7 +28,7 @@ class IceViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     override func sliderValueChanged(_ sender: UISlider!) {
-        super.sliderValueChanged(<#T##sender: UISlider!##UISlider!#>)
+        super.sliderValueChanged(sender)
         
         ChoicesViewController.setValues(percent: Double(sender.value), vc: self)
         
