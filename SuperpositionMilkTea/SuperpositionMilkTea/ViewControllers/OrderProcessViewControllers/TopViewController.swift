@@ -12,6 +12,10 @@ import UIKit
 class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
     var foamButton = UIButton()
+    var basilSeedButton = UIButton()
+    var herbalJellyfoamButton = UIButton()
+
+    
     var cup1 = CupView()
     
     override func viewDidLoad() {
@@ -21,13 +25,19 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
         setFoamButton()
         setupSlider()
         
+        
+        
+        
+        setBasilSeeds()
+        setHerbalJelly()
+        
         let addEntryButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle .plain, target: self, action: #selector(addEntryAction))
         
         // UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addEntryAction))
         self.navigationItem.rightBarButtonItem = addEntryButton
         
         // Add the view to the view hierarchy so that it shows up on screen
-        self.view.addSubview(cup)
+        self.view.addSubview(cup1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,12 +47,30 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     
     // put setValues in here to run
     func setFoamButton() {
-        foamButton = UIButton(frame: CGRect(x: ChoicesViewController.width / 5.0, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
-        foamButton.backgroundColor = UIColor.yellow
+        foamButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 1 / 20, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        foamButton.backgroundColor = UIColor.cyan
         foamButton.layer.cornerRadius = 3.0
         foamButton.setTitle("Milk Foam", for: .normal)
         foamButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         self.view.addSubview(foamButton)
+    }
+    
+    func setBasilSeeds() {
+        basilSeedButton = UIButton(frame: CGRect(x: ChoicesViewController.width - ChoicesViewController.width / 4.5 - ChoicesViewController.width * 1 / 20, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        basilSeedButton.backgroundColor = UIColor.cyan
+        basilSeedButton.layer.cornerRadius = 3.0
+        basilSeedButton.setTitle("Basil Seeds", for: .normal)
+        //basilSeedButton(self, action: #selector(buttonTapped), for: .touchUpInside)
+        self.view.addSubview(basilSeedButton)
+    }
+    
+    func setHerbalJelly() {
+        herbalJellyfoamButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 1 / 20, y: (ChoicesViewController.height - ChoicesViewController.height * 2 / 7 - 50), width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        herbalJellyfoamButton.backgroundColor = UIColor.cyan
+        herbalJellyfoamButton.layer.cornerRadius = 3.0
+        herbalJellyfoamButton.setTitle("Herbal Jelly", for: .normal)
+        //herbalJellyfoamButton(self, action: #selector(buttonTapped), for: .touchUpInside)
+        self.view.addSubview(herbalJellyfoamButton)
     }
     
     @objc private func addEntryAction() {
