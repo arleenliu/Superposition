@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
         let navController = UINavigationController()
-     //   let landingView = MoodEntriesViewController()
-     //   navController.viewControllers = [landingView]
+        let landingView = InitChoiceViewController()
+        navController.viewControllers = [landingView]
         self.window!.rootViewController = navController
             
         self.window?.makeKeyAndVisible()

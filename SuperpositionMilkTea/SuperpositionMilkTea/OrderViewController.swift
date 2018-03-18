@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
+public class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+    
+}
