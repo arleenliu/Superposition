@@ -16,6 +16,10 @@ class ChoicesViewController : UIViewController /*UITableViewDelegate, UITableVie
     var nextVC: UIViewController = UIViewController()
     public static let cup = CupView(frame: CGRect(x: UIScreen.main.bounds.width*1.0/3, y: UIScreen.main.bounds.height*1/5, width: UIScreen.main.bounds.width*1.0/3, height: UIScreen.main.bounds.height*3/5))
     
+    convenience init(){
+        self.init()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

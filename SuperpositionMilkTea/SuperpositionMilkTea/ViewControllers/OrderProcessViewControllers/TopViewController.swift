@@ -10,14 +10,8 @@ import Foundation
 import UIKit
 
 class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
-    init() {
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    var foamButton : UIButton
+    var foamButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +46,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     override func sliderValueChanged(_ sender: UISlider!) {
-        super.sliderValueChanged(<#T##sender: UISlider!##UISlider!#>)
+        super.sliderValueChanged(sender)
         
         ChoicesViewController.setValues(percent: Double(sender.value), vc: self)
         
