@@ -20,27 +20,28 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
         self.view.backgroundColor = UIColor.white
         setupLabels()
         setupSlider()
-        setupSubmitButton()
-        setupMediumButton()
+        setupPlainButton()
+        setupSizeButton()
+        setupNextButton()
         
     }
     
     // MARK: Helpers
     func setupLabels() {
         
-        let sizeLabel = UILabel(frame: CGRect(x: 0, y: UIScreen.main.bounds.height / 4.0, width: UIScreen.main.bounds.width, height: 80))
+        let sizeLabel = UILabel(frame: CGRect(x: 0, y: (UIScreen.main.bounds.height / 4.0) - 80, width: UIScreen.main.bounds.width, height: 80))
         sizeLabel.font = UIFont.systemFont(ofSize: 20)
         sizeLabel.textAlignment = .center
         sizeLabel.text = "Size"
         self.view.addSubview(sizeLabel)
         
-        let flavorLabel = UILabel(frame: CGRect(x: 0, y: UIScreen.main.bounds.height / 2.0, width: UIScreen.main.bounds.width, height: 80))
+        let flavorLabel = UILabel(frame: CGRect(x: 0, y: (UIScreen.main.bounds.height / 2.0) - 80, width: UIScreen.main.bounds.width, height: 80))
         flavorLabel.font = UIFont.systemFont(ofSize: 20)
         flavorLabel.textAlignment = .center
         flavorLabel.text = "Flavor"
         self.view.addSubview(flavorLabel)
         
-        let sugarLabel = UILabel(frame: CGRect(x: 0, y: 3*UIScreen.main.bounds.height / 4.0, width: UIScreen.main.bounds.width, height: 80))
+        let sugarLabel = UILabel(frame: CGRect(x: 0, y: (3*UIScreen.main.bounds.height / 4.0) - 60, width: UIScreen.main.bounds.width, height: 80))
         sugarLabel.font = UIFont.systemFont(ofSize: 20)
         sugarLabel.textAlignment = .center
         sugarLabel.text = "Sugar"
@@ -48,7 +49,7 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     
     func setupSlider() {
-        let slider = UISlider(frame: CGRect(x: 50, y: 260, width: 280, height: 20))
+        let slider = UISlider(frame: CGRect(x: 50, y: (3*UIScreen.main.bounds.height/4.0) + 20, width: 280, height: 20))
         slider.minimumValue = 1
         slider.maximumValue = 5
         slider.isContinuous = true
@@ -57,37 +58,37 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
         self.view.addSubview(slider)
     }
     
-    func setupSubmitButton() {
-        submitButton = UIButton(frame: CGRect(x: 90, y: 370, width: 100, height: 60))
+    func setupPlainButton() {
+        submitButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: (UIScreen.main.bounds.height / 2.0), width: 100, height: 60))
         submitButton.backgroundColor = UIColor.blue
         submitButton.layer.cornerRadius = 3.0
-        submitButton.setTitle("SUBMIT", for: .normal)
+        submitButton.setTitle("Plain", for: .normal)
         submitButton.addTarget(self, action: #selector(buttonTapped1), for: .touchUpInside)
         self.view.addSubview(submitButton)
     }
     
-    func setupMediumButton() {
-        mediumButton = UIButton(frame: CGRect(x: 90, y: 570, width: 100, height: 60))
+    func setupSizeButton() {
+        mediumButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: (UIScreen.main.bounds.height / 4), width: 100, height: 60))
         mediumButton.backgroundColor = UIColor.blue
         mediumButton.layer.cornerRadius = 3.0
-        mediumButton.setTitle("MEDIUM", for: .normal)
+        mediumButton.setTitle("Medium", for: .normal)
         mediumButton.addTarget(self, action: #selector(buttonTapped2), for: .touchUpInside)
         self.view.addSubview(mediumButton)
     }
     
-    func setupPlainButton() {
-        plainButton = UIButton(frame: CGRect(x: 90, y: 370, width: 100, height: 60))
+    func setupNextButton() {
+        plainButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: 580, width: 100, height: 60))
         plainButton.backgroundColor = UIColor.blue
         plainButton.layer.cornerRadius = 3.0
-        plainButton.setTitle("SUBMIT", for: .normal)
+        plainButton.setTitle("Next", for: .normal)
         plainButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
         self.view.addSubview(plainButton)
     }
     
     // MARK: Selectors
     @objc func sliderValueChanged(_ sender: UISlider!) {
-        let roundedValue = round(sender.value)
-        sender.value = roundedValue
+//        let roundedValue = round(sender.value)
+//        sender.value = roundedValue
        
     }
     
@@ -111,8 +112,8 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     @objc func buttonTapped3() {
         
-        plainButton.backgroundColor = UIColor.orange
-        
+        let entryViewController = BotViewController()
+        navigationController?.pushViewController(entryViewController, animated: true)
     }
     
     

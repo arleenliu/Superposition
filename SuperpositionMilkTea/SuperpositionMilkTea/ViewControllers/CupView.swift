@@ -29,6 +29,12 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     var topPercent = 0.0;
     var icePercent = 0.0;
     
+    var bot = UIView()
+    var milk = UIView()
+    var tea = UIView()
+    var top = UIView()
+    var ice = UIView()
+    
     var fillColor = UIColor.white
     
     override init(frame: CGRect) {
@@ -40,6 +46,9 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
         super.init(coder: aDecoder)
     }
     
+    func getCup() -> CupView {
+        return self;
+    }
     
     // call each time cup is used
     func setValues(percent: Double, vc: UIViewController) {
@@ -74,37 +83,6 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             fillColor.setFill()
         }
         
-        currHeight = (botPercent)*frameHeight
-        currY = currY-currHeight
-        
-        for i in 0..<count {
-           // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
-            
-            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
-            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
-            
-            fillColor.set()
-          //   bpath.stroke()
-            
-            if (i == 1) {
-            currHeight = (milkPercent)*frameHeight
-            currY = currY-currHeight
-            } else if (i == 2) {
-                currHeight = (teaPercent)*frameHeight
-                currY = currY-currHeight
-            } else if (i == 3) {
-                currHeight = (topPercent)*frameHeight
-                currY = currY-currHeight
-            } else if (i == 4) {
-                currHeight = (icePercent)*frameHeight
-                currY = currY-currHeight
-            }
-            
-            let myView = UIView(frame: drect)
-            
-            self.addSubview(myView)
-        }
-        
         // let rect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
         
     }
@@ -118,11 +96,11 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
         for i in 0..<count {
             // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
             
-            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
-            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
-            
-            fillColor.set()
-            //   bpath.stroke()
+//            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
+//            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
+//
+//            fillColor.set()
+//            //   bpath.stroke()
             
             if (i == 1) {
                 currHeight = (milkPercent)*frameHeight
@@ -138,7 +116,9 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
                 currY = currY-currHeight
             }
             
-            let myView = UIView(frame: drect)
+            let myView = UIView(frame: CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
+            
+           myView.backgroundColor = fillColor
             
             self.addSubview(myView)
         }
