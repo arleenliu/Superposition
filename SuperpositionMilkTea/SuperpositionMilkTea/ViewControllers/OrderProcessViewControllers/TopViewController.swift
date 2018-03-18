@@ -25,9 +25,6 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
         setFoamButton()
         setupSlider()
         
-        
-        
-        
         setBasilSeeds()
         setHerbalJelly()
         
@@ -47,7 +44,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     
     // put setValues in here to run
     func setFoamButton() {
-        foamButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 1 / 20, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        foamButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width * 1 / 20, y: UIScreen.main.bounds.height / 7.0, width: UIScreen.main.bounds.width / 4.5, height: UIScreen.main.bounds.height / 7))
         foamButton.backgroundColor = UIColor.cyan
         foamButton.layer.cornerRadius = 3.0
         foamButton.setTitle("Milk Foam", for: .normal)
@@ -56,7 +53,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     func setBasilSeeds() {
-        basilSeedButton = UIButton(frame: CGRect(x: ChoicesViewController.width - ChoicesViewController.width / 4.5 - ChoicesViewController.width * 1 / 20, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        basilSeedButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width - UIScreen.main.bounds.width / 4.5 - UIScreen.main.bounds.width * 1 / 20, y: UIScreen.main.bounds.height / 7.0, width: UIScreen.main.bounds.width / 4.5, height: UIScreen.main.bounds.height / 7))
         basilSeedButton.backgroundColor = UIColor.cyan
         basilSeedButton.layer.cornerRadius = 3.0
         basilSeedButton.setTitle("Basil Seeds", for: .normal)
@@ -65,7 +62,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     func setHerbalJelly() {
-        herbalJellyfoamButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 1 / 20, y: (ChoicesViewController.height - ChoicesViewController.height * 2 / 7 - 50), width: ChoicesViewController.width / 4.5, height: ChoicesViewController.height / 7))
+        herbalJellyfoamButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width * 1 / 20, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height * 2 / 7 - 50), width: UIScreen.main.bounds.width / 4.5, height: UIScreen.main.bounds.height / 7))
         herbalJellyfoamButton.backgroundColor = UIColor.cyan
         herbalJellyfoamButton.layer.cornerRadius = 3.0
         herbalJellyfoamButton.setTitle("Herbal Jelly", for: .normal)
@@ -94,7 +91,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     @objc func sliderValueChanged(_ sender: UISlider!) {
-        cup.setValues(percent: Double(sender.value), num: 4)
+        cup1.setValues(percent: Double(sender.value), num: 4)
         
     }
     
