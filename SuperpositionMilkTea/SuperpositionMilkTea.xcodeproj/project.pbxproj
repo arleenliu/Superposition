@@ -19,6 +19,8 @@
 		C0CFC18A205E202E00C39B74 /* IceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC189205E202E00C39B74 /* IceViewController.swift */; };
 		C0CFC18C205E204500C39B74 /* MilkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC18B205E204500C39B74 /* MilkViewController.swift */; };
 		C0CFC18E205E205A00C39B74 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC18D205E205A00C39B74 /* TopViewController.swift */; };
+		C0CFC192205E638200C39B74 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC191205E638200C39B74 /* LogoutViewController.swift */; };
+		C0CFC194205E639B00C39B74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC193205E639B00C39B74 /* SettingsViewController.swift */; };
 		FA633D7C205DFC03008729B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D7B205DFC03008729B6 /* AppDelegate.swift */; };
 		FA633D7E205DFC03008729B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D7D205DFC03008729B6 /* ViewController.swift */; };
 		FA633D81205DFC03008729B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA633D7F205DFC03008729B6 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		C0CFC189205E202E00C39B74 /* IceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceViewController.swift; sourceTree = "<group>"; };
 		C0CFC18B205E204500C39B74 /* MilkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkViewController.swift; sourceTree = "<group>"; };
 		C0CFC18D205E205A00C39B74 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		C0CFC191205E638200C39B74 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		C0CFC193205E639B00C39B74 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FA633D78205DFC03008729B6 /* SuperpositionMilkTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperpositionMilkTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA633D7B205DFC03008729B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA633D7D205DFC03008729B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				C0B97BAD205E1A7900A5B719 /* ProfileViewController.swift */,
 				C0B97BAB205E1A7900A5B719 /* OrderViewController.swift */,
 				C0B97BA4205E1A7900A5B719 /* BrowseViewController.swift */,
+				C0CFC191205E638200C39B74 /* LogoutViewController.swift */,
+				C0CFC193205E639B00C39B74 /* SettingsViewController.swift */,
 			);
 			path = SideMenuViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +336,8 @@
 				FA633D7E205DFC03008729B6 /* ViewController.swift in Sources */,
 				C0CFC18A205E202E00C39B74 /* IceViewController.swift in Sources */,
 				C0B97BCA205E1D6600A5B719 /* BotViewController.swift in Sources */,
+				C0CFC192205E638200C39B74 /* LogoutViewController.swift in Sources */,
+				C0CFC194205E639B00C39B74 /* SettingsViewController.swift in Sources */,
 				FA633D7C205DFC03008729B6 /* AppDelegate.swift in Sources */,
 				C0B97BB8205E1A7900A5B719 /* ConfirmViewController.swift in Sources */,
 				C0B97BB9205E1A7900A5B719 /* ProfileViewController.swift in Sources */,

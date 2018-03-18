@@ -13,6 +13,10 @@ class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "SEARCH NEARBY STORES"
+        self.view.backgroundColor = UIColor.white
+
+        
     }
     
 }

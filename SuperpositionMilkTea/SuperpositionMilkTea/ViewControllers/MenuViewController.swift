@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public var entries: [(String)] = ["Order", "Profile", "Browse", "Settings", "Logout"]
+public var entries: [(String, UIButton)] = [("Order", UIButton()),("Profile", UIButton()), ("Browse", UIButton()), ("Settings", UIButton()), ("Logout", UIButton())]
 
 class MenuViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,6 +21,14 @@ class MenuViewController : UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
+        
+        
+        //        setupOrderButton()
+        //        setupProfileButton()
+        //        setupBrowseButton()
+        //        setupSettingsButton()
+        //        setupLogoutButton()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,10 +48,19 @@ class MenuViewController : UIViewController, UITableViewDelegate, UITableViewDat
         //public var entries: [(String, UIColor)] = []
         let entry = entries[indexPath.row]
         let cell = UITableViewCell()
-        cell.textLabel?.text = entry
+        cell.textLabel?.text = entry.0
         cell.backgroundColor = UIColor.green
         return cell
     }
+    
+    
+    
+    
+    
+//    @objc private func addEntryAction() {
+//        let entryViewController = MoodEntryViewController()
+//        navigationController?.pushViewController(entryViewController, animated: true)
+//    }
     
     
 }
