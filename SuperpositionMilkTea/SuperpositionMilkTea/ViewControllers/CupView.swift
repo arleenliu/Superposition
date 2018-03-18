@@ -38,7 +38,10 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     var fillColor = UIColor.white
     
     override init(frame: CGRect) {
+        
         super.init(frame: CGRect(x: frameX, y: frameY, width: frameWidth, height: frameHeight))
+        self.backgroundColor = UIColor.black
+        
         bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
         milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
         tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
@@ -56,10 +59,10 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
 //    }
     
     // call each time cup is used
-   func setValues(percent: Double, vc: UIViewController) {
+    func setValues(percent: Double, num: Int) {
         
-        switch vc {
-        case is IceViewController:
+        switch num {
+        case 5:
             print("working")
             fillColor = UIColor.purple
             fillColor.setFill()
@@ -69,7 +72,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*icePercent)))
             
             ice.backgroundColor = fillColor
-        case is TopViewController:
+        case 4:
             fillColor = UIColor.blue
             fillColor.setFill()
             topPercent = (percent / 100.0)
@@ -78,7 +81,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*topPercent)))
             
             top.backgroundColor = fillColor
-        case is TeaViewController:
+        case 3:
             fillColor = UIColor.green
             fillColor.setFill()
             teaPercent = (percent / 100.0)
@@ -87,7 +90,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*teaPercent)))
             
             tea.backgroundColor = fillColor
-        case is MilkViewController:
+        case 2:
             fillColor = UIColor.orange
             fillColor.setFill()
             milkPercent = (percent / 100.0)
@@ -96,7 +99,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
              milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*milkPercent)))
             
             milk.backgroundColor = fillColor
-        case is BotViewController:
+        case 1:
             fillColor = UIColor.red
             fillColor.setFill()
             botPercent = (percent / 100.0)

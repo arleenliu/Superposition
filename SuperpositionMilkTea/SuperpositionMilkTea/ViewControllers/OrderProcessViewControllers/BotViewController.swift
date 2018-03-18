@@ -99,7 +99,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     }
     
     @objc func sliderValueChanged(_ sender: UISlider!) {
-        cup1.setValues(percent: Double(sender.value), vc: self)
+        cup1.setValues(percent: Double(sender.value), num: 1)
         
     }
     
