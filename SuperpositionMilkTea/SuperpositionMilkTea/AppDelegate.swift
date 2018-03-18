@@ -18,10 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
             self.window = UIWindow(frame: UIScreen.main.bounds)
             
-        let navController = UINavigationController()
-        let landingView = BotViewController()
-        navController.viewControllers = [landingView]
-        self.window!.rootViewController = navController
+//        let navController = UINavigationController()
+//        let landingView = OrderViewController()
+//        navController.viewControllers = [landingView]
+//        self.window!.rootViewController = navController
+        
+        self.window!.backgroundColor = UIColor.white
+        var splitViewController =  UISplitViewController()
+        var rootViewController = MenuViewController()
+        var detailViewController = OrderViewController()
+        
+        var rootNavigationController = UINavigationController(rootViewController:rootViewController)
+        var detailNavigationController = UINavigationController(rootViewController:detailViewController)
+        splitViewController.viewControllers = [rootNavigationController,detailNavigationController]
+        self.window!.rootViewController = splitViewController
         
             
         self.window?.makeKeyAndVisible()
