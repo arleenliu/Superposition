@@ -39,6 +39,11 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: frameX, y: frameY, width: frameWidth, height: frameHeight))
+        bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
         
     }
     
@@ -59,26 +64,36 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             fillColor.setFill()
             icePercent = (percent / 100.0)
             count = 5;
+            
+            ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*icePercent)))
         case is TopViewController:
             fillColor = UIColor.blue
             fillColor.setFill()
             topPercent = (percent / 100.0)
             count = 4;
+            
+            top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*topPercent)))
         case is TeaViewController:
             fillColor = UIColor.green
             fillColor.setFill()
             teaPercent = (percent / 100.0)
             count = 3;
+            
+            tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*teaPercent)))
         case is MilkViewController:
             fillColor = UIColor.orange
             fillColor.setFill()
             milkPercent = (percent / 100.0)
             count = 2;
+            
+             milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*milkPercent)))
         case is BotViewController:
             fillColor = UIColor.red
             fillColor.setFill()
             botPercent = (percent / 100.0)
             count = 1;
+            
+            bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight - (frameHeight*botPercent), width: frameWidth, height: (frameHeight*botPercent)))
         default:
             fillColor.setFill()
         }
