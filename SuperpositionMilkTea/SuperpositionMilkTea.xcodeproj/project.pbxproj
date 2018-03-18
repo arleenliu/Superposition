@@ -14,6 +14,7 @@
 		FA633D86205DFC03008729B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA633D84205DFC03008729B6 /* LaunchScreen.storyboard */; };
 		FA633D91205DFC03008729B6 /* SuperpositionMilkTeaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D90205DFC03008729B6 /* SuperpositionMilkTeaTests.swift */; };
 		FA633D9C205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D9B205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift */; };
+		FA633DAA205E0F0E008729B6 /* ViewControllers in Resources */ = {isa = PBXBuildFile; fileRef = FA633DA9205E0F0D008729B6 /* ViewControllers */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FA633D97205DFC03008729B6 /* SuperpositionMilkTeaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperpositionMilkTeaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA633D9B205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperpositionMilkTeaUITests.swift; sourceTree = "<group>"; };
 		FA633D9D205DFC03008729B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA633DA9205E0F0D008729B6 /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewControllers; path = ../../../../ViewControllers; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		FA633D7A205DFC03008729B6 /* SuperpositionMilkTea */ = {
 			isa = PBXGroup;
 			children = (
+				FA633DA9205E0F0D008729B6 /* ViewControllers */,
 				FA633D7B205DFC03008729B6 /* AppDelegate.swift */,
 				FA633D7D205DFC03008729B6 /* ViewController.swift */,
 				FA633D7F205DFC03008729B6 /* Main.storyboard */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA633D86205DFC03008729B6 /* LaunchScreen.storyboard in Resources */,
+				FA633DAA205E0F0E008729B6 /* ViewControllers in Resources */,
 				FA633D83205DFC03008729B6 /* Assets.xcassets in Resources */,
 				FA633D81205DFC03008729B6 /* Main.storyboard in Resources */,
 			);
