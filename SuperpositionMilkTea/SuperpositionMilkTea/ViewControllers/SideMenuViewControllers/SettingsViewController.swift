@@ -13,6 +13,7 @@ class SettingsViewController : UIViewController /*UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Settings"
     }
     
 }

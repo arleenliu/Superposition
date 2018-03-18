@@ -13,6 +13,7 @@ class LogoutViewController : UIViewController /*UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title="Logout"
     }
     
 }

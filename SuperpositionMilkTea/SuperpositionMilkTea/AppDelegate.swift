@@ -25,12 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.backgroundColor = UIColor.white
         var splitViewController =  UISplitViewController()
-        var detailViewController = MenuViewController()
-        var rootViewController = OrderViewController()
+        var rootViewController = MenuViewController()
+        var detailViewController = OrderViewController()
         
         var rootNavigationController = UINavigationController(rootViewController:rootViewController)
         var detailNavigationController = UINavigationController(rootViewController:detailViewController)
-        splitViewController.viewControllers = [detailNavigationController,rootNavigationController]
+        splitViewController.viewControllers = [rootNavigationController,detailNavigationController]
         self.window!.rootViewController = splitViewController
         
             

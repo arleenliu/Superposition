@@ -13,11 +13,13 @@ class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "SEARCH NEARBY STORES"
+        self.title = "NEARBY STORES"
         self.view.backgroundColor = UIColor.white
         
-        let addOrderButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addOrderAction))
-        self.navigationItem.rightBarButtonItem = addOrderButton
+        setupOrderButton()
+        
+//        let addOrderButton = UIButton(barButtonSystemItem: .add, target: self, action: #selector(addOrderAction))
+//        self.navigationItem.rightBarButtonItem = addOrderButton
         
         
 //        let addOrderButton = UIButton(/*button: .add, target: self, action:, #selector(addOrderAction)*/);
@@ -27,28 +29,21 @@ class OrderViewController : UIViewController /*UITableViewDelegate, UITableViewD
     
     
     @objc private func addOrderAction() {
-        let orderViewController = OrderViewController()
+        let orderViewController = InitChoiceViewController() //QUOIIIII
         navigationController?.pushViewController(orderViewController, animated: true)
     }
     
-//    @objc private func addProfileAction() {
-//        let profileViewController = ProfileViewController()
-//        navigationController?.pushViewController(profileViewController, animated: true)
-//    }
-//
-//    @objc private func addBrowseAction() {
-//        let browseViewController = BrowseViewController()
-//        navigationController?.pushViewController(browseViewController, animated: true)
-//    }
-//
-//    @objc private func addSettingsAction() {
-//        let settingsViewController = SettingsViewController()
-//        navigationController?.pushViewController(settingsViewController, animated: true)
-//    }
-//
-//    @objc private func addLogoutAction() {
-//        let logoutViewController = LogoutViewController()
-//        navigationController?.pushViewController(logoutViewController, animated: true)
-//    }
-//
+    func setupOrderButton() {
+        let orderButton = UIButton(frame: CGRect(x: 0, y: UIScreen.main.bounds.height * 1/12, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 1/4))
+        
+        
+        //orderButton.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        orderButton.setTitleColor(UIColor.black, for: .normal)
+        orderButton.backgroundColor = UIColor.green
+        orderButton.layer.cornerRadius = 3.0
+        orderButton.setTitle("Horizons School : Order", for: .normal)
+        orderButton.addTarget(self, action: #selector(addOrderAction), for: .touchUpInside)
+        self.view.addSubview(orderButton)
+        
+    }
 }
