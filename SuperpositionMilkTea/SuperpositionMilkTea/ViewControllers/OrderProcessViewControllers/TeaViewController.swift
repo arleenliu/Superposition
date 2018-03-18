@@ -25,12 +25,12 @@ class TeaViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
         self.navigationItem.rightBarButtonItem = addEntryButton
         
         // Add the view to the view hierarchy so that it shows up on screen
-        self.view.addSubview(cup1.getCup())
+        self.view.addSubview(cup1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.addSubview(cup1.getCup()) // maybe?
+        self.view.addSubview(cup1) // maybe?
     }
     
     @objc private func addEntryAction() {
