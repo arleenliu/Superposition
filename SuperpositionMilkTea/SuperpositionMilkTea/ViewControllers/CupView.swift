@@ -40,10 +40,9 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
         super.init(coder: aDecoder)
     }
     
-    func drawRect(percent: Double, color: UIColor, vc: UIViewController) {
-        
-        currHeight = (percent / 100.0)*frameHeight
-        currY = currY-currHeight
+    
+    // call each time cup is used
+    func setValues(percent: Double, color: UIColor, vc: UIViewController) {
         
         switch vc {
         case is IceViewController:
@@ -75,30 +74,75 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             fillColor.setFill()
         }
         
-        var prevX = 0;
-        var prevY = 0;
+        currHeight = (botPercent)*frameHeight
+        currY = currY-currHeight
         
         for i in 0..<count {
+           // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
             
+            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
+            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
+            
+            fillColor.set()
+          //   bpath.stroke()
+            
+            if (i == 1) {
+            currHeight = (milkPercent)*frameHeight
+            currY = currY-currHeight
+            } else if (i == 2) {
+                currHeight = (teaPercent)*frameHeight
+                currY = currY-currHeight
+            } else if (i == 3) {
+                currHeight = (topPercent)*frameHeight
+                currY = currY-currHeight
+            } else if (i == 4) {
+                currHeight = (icePercent)*frameHeight
+                currY = currY-currHeight
+            }
+            
+            let myView = UIView(frame: drect)
+            
+            self.addSubview(myView)
         }
         
-        let rect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
-        let myView = UIView(frame: rect)
-        
-        
+        // let rect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
         
     }
     
-    
-    override func draw(_ rect: CGRect) {
+    override func draw(_ frame: CGRect){
+        super.draw(self.frame);
         
-        let fillColor = UIColor(red: 0.00, green: 0.59, blue: 1.0, alpha: 1.0)
-        fillColor.setFill()
+        currHeight = (botPercent)*frameHeight
+        currY = currY-currHeight
+        
+        for i in 0..<count {
+            // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
+            
+            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
+            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
+            
+            fillColor.set()
+            //   bpath.stroke()
+            
+            if (i == 1) {
+                currHeight = (milkPercent)*frameHeight
+                currY = currY-currHeight
+            } else if (i == 2) {
+                currHeight = (teaPercent)*frameHeight
+                currY = currY-currHeight
+            } else if (i == 3) {
+                currHeight = (topPercent)*frameHeight
+                currY = currY-currHeight
+            } else if (i == 4) {
+                currHeight = (icePercent)*frameHeight
+                currY = currY-currHeight
+            }
+            
+            let myView = UIView(frame: drect)
+            
+            self.addSubview(myView)
+        }
     }
-    
-//    override func draw(percent: Double, whichChoice: Int){
-//        super.draw(<#T##CGRect#>);
-//    }
     
     
     
