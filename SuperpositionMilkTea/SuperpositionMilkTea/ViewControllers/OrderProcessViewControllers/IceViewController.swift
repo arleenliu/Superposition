@@ -9,10 +9,8 @@
 import Foundation
 import UIKit
 
-class IceViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class IceViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
     
 }
