@@ -28,7 +28,7 @@ class ChoicesViewController : UIViewController /*UITableViewDelegate, UITableVie
     }
     
     func setValues(percent: Double, vc: UIViewController) {
-        cup.setValues(percent: percent, vc: vc)
+        cup.setValues(percent: percent, num: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
