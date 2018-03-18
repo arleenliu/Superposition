@@ -15,13 +15,13 @@ class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableVie
         super.viewDidLoad()
         self.title = "Confirmation"
         
-        let centerMessage = UILabel(frame: CGRect(x: 0, y: 0 - 50, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let centerMessage = UILabel(frame: CGRect(x: 0, y: 0 - 80, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         centerMessage.textAlignment = .center
         centerMessage.text = "Your order is complete!"
         self.view.addSubview(centerMessage)
         
     
-        let pay = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: (UIScreen.main.bounds.height * (6 / 12)), width: 100, height: 60))
+        let pay = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 100, y: (UIScreen.main.bounds.height * (6 / 12)), width: 200, height: 60))
         pay.backgroundColor = UIColor.blue
         pay.layer.cornerRadius = 3.0
         pay.setTitle("Pay for your drink", for: .normal)
@@ -40,14 +40,14 @@ class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableVie
         nextButton.backgroundColor = UIColor.blue
         nextButton.layer.cornerRadius = 3.0
         nextButton.setTitle("Return to home", for: .normal)
-        nextButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(buttonTapped1), for: .touchUpInside)
         self.view.addSubview(nextButton)
         
         
     
     }
     
-    @objc func buttonTapped() {
+    @objc func buttonTapped1() {
         let entryViewController = OrderViewController()
         navigationController?.pushViewController(entryViewController, animated: true)
     }
