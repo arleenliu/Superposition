@@ -15,7 +15,7 @@ class ConfirmViewController : UIViewController /*UITableViewDelegate, UITableVie
         super.viewDidLoad()
         self.title = "Confirmation"
         
-        let centerMessage = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let centerMessage = UILabel(frame: CGRect(x: 0, y: 0 - 50, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         centerMessage.textAlignment = .center
         centerMessage.text = "Your order is complete!"
         self.view.addSubview(centerMessage)
