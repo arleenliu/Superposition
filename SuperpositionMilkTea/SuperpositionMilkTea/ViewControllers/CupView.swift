@@ -39,7 +39,9 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     override init(frame: CGRect) {
         
         super.init(frame: CGRect(x: frameX, y: frameY, width: frameWidth, height: frameHeight))
-        self.backgroundColor = UIColor.black
+        //self.backgroundColor = UIColor.black
+        self.backgroundColor = UIColor.brown
+
         
         bot = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
         milk = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
