@@ -66,7 +66,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
     }
     
     @objc func sliderValueChanged(_ sender: UISlider!) {
-        cup.setValues(percent: Double(sender.value), vc: self)
+        cup.setValues(percent: Double(sender.value), num: 4)
         
     }
     
