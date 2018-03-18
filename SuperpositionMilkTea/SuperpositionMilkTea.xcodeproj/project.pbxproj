@@ -15,6 +15,7 @@
 		FA633D91205DFC03008729B6 /* SuperpositionMilkTeaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D90205DFC03008729B6 /* SuperpositionMilkTeaTests.swift */; };
 		FA633D9C205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D9B205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift */; };
 		FA633DAA205E0F0E008729B6 /* ViewControllers in Resources */ = {isa = PBXBuildFile; fileRef = FA633DA9205E0F0D008729B6 /* ViewControllers */; };
+		FAFE20C6205E169A00DB166D /* CupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE20C5205E169A00DB166D /* CupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FA633D9B205DFC03008729B6 /* SuperpositionMilkTeaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperpositionMilkTeaUITests.swift; sourceTree = "<group>"; };
 		FA633D9D205DFC03008729B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA633DA9205E0F0D008729B6 /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewControllers; path = ../../../../ViewControllers; sourceTree = "<group>"; };
+		FAFE20C5205E169A00DB166D /* CupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				FA633DA9205E0F0D008729B6 /* ViewControllers */,
 				FA633D7B205DFC03008729B6 /* AppDelegate.swift */,
 				FA633D7D205DFC03008729B6 /* ViewController.swift */,
+				FAFE20C5205E169A00DB166D /* CupView.swift */,
 				FA633D7F205DFC03008729B6 /* Main.storyboard */,
 				FA633D82205DFC03008729B6 /* Assets.xcassets */,
 				FA633D84205DFC03008729B6 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				FA633D7E205DFC03008729B6 /* ViewController.swift in Sources */,
 				FA633D7C205DFC03008729B6 /* AppDelegate.swift in Sources */,
+				FAFE20C6205E169A00DB166D /* CupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
