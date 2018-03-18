@@ -99,7 +99,7 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     
     func setupSmallButton() {
-        smallButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: UIScreen.main.bounds.height / 4, width: 100, height: 60))
+        smallButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 6) - 50, y: UIScreen.main.bounds.height / 4, width: 100, height: 60))
         smallButton.backgroundColor = UIColor.blue
         smallButton.layer.cornerRadius = 3.0
         smallButton.setTitle("Small", for: .normal)
@@ -108,16 +108,16 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     
     func setupLargeButton() {
-        largeButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: UIScreen.main.bounds.height / 4, width: 100, height: 60))
-        plainButton.backgroundColor = UIColor.blue
-        plainButton.layer.cornerRadius = 3.0
-        plainButton.setTitle("Large", for: .normal)
+        largeButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width * 5 / 6)-50, y: UIScreen.main.bounds.height / 4, width: 100, height: 60))
+        largeButton.backgroundColor = UIColor.blue
+        largeButton.layer.cornerRadius = 3.0
+        largeButton.setTitle("Large", for: .normal)
         //plainButton.addTarget(self, action: #selector(buttonTapped3), for: .touchUpInside)
-        self.view.addSubview(plainButton)
+        self.view.addSubview(largeButton)
     }
     
     func setupPassionFruitButton() {
-        passionFruitButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: (UIScreen.main.bounds.height / 2.0), width: 100, height: 60))
+        passionFruitButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 6 - 50), y: (UIScreen.main.bounds.height / 2.0), width: 100, height: 60))
         passionFruitButton.backgroundColor = UIColor.blue
         passionFruitButton.layer.cornerRadius = 3.0
         passionFruitButton.setTitle("Passion Fruit", for: .normal)
@@ -126,7 +126,7 @@ class InitChoiceViewController : UIViewController /*UITableViewDelegate, UITable
     }
     
     func setupEarlGreyButton() {
-        earlGreyButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width / 2) - 50, y: (UIScreen.main.bounds.height / 2.0), width: 100, height: 60))
+        earlGreyButton = UIButton(frame: CGRect(x: (UIScreen.main.bounds.width * 5 / 6 ) - 50, y: (UIScreen.main.bounds.height / 2.0), width: 100, height: 60))
         earlGreyButton.backgroundColor = UIColor.blue
         earlGreyButton.layer.cornerRadius = 3.0
         earlGreyButton.setTitle("Earl Grey", for: .normal)
