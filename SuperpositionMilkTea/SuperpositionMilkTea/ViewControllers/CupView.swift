@@ -66,6 +66,8 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             count = 5;
             
             ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*icePercent)))
+            
+            ice.backgroundColor = fillColor
         case is TopViewController:
             fillColor = UIColor.blue
             fillColor.setFill()
@@ -73,6 +75,8 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             count = 4;
             
             top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*topPercent)))
+            
+            top.backgroundColor = fillColor
         case is TeaViewController:
             fillColor = UIColor.green
             fillColor.setFill()
@@ -80,6 +84,8 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             count = 3;
             
             tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*teaPercent)))
+            
+            tea.backgroundColor = fillColor
         case is MilkViewController:
             fillColor = UIColor.orange
             fillColor.setFill()
@@ -87,6 +93,8 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             count = 2;
             
              milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*milkPercent)))
+            
+            milk.backgroundColor = fillColor
         case is BotViewController:
             fillColor = UIColor.red
             fillColor.setFill()
@@ -94,6 +102,8 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             count = 1;
             
             bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight - (frameHeight*botPercent), width: frameWidth, height: (frameHeight*botPercent)))
+            
+            bot.backgroundColor = fillColor
         default:
             fillColor.setFill()
         }
@@ -108,35 +118,40 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
         currHeight = (botPercent)*frameHeight
         currY = currY-currHeight
         
-        for i in 0..<count {
-            // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
-            
-//            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
-//            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
+//        for i in 0..<count {
+//            // draw(CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
 //
-//            fillColor.set()
-//            //   bpath.stroke()
-            
-            if (i == 1) {
-                currHeight = (milkPercent)*frameHeight
-                currY = currY-currHeight
-            } else if (i == 2) {
-                currHeight = (teaPercent)*frameHeight
-                currY = currY-currHeight
-            } else if (i == 3) {
-                currHeight = (topPercent)*frameHeight
-                currY = currY-currHeight
-            } else if (i == 4) {
-                currHeight = (icePercent)*frameHeight
-                currY = currY-currHeight
-            }
-            
-            let myView = UIView(frame: CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
-            
-           myView.backgroundColor = fillColor
-            
-            self.addSubview(myView)
-        }
+////            var drect = CGRect(x: currX, y: currY, width: frameWidth, height: currHeight)
+////            // var bpath:UIBezierPath = UIBezierPath(rect: drect)
+////
+////            fillColor.set()
+////            //   bpath.stroke()
+//
+//            if (i == 1) {
+//                currHeight = (milkPercent)*frameHeight
+//                currY = currY-currHeight
+//            } else if (i == 2) {
+//                currHeight = (teaPercent)*frameHeight
+//                currY = currY-currHeight
+//            } else if (i == 3) {
+//                currHeight = (topPercent)*frameHeight
+//                currY = currY-currHeight
+//            } else if (i == 4) {
+//                currHeight = (icePercent)*frameHeight
+//                currY = currY-currHeight
+//            }
+//
+//            let myView = UIView(frame: CGRect(x: currX, y: currY, width: frameWidth, height: currHeight))
+//
+//           myView.backgroundColor = fillColor
+        
+//    }
+            self.addSubview(bot)
+            self.insertSubview(milk, aboveSubview: bot)
+            self.insertSubview(tea, aboveSubview: milk)
+            self.insertSubview(top, aboveSubview: tea)
+            self.insertSubview(ice, aboveSubview: top)
+        
     }
     
     
