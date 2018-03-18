@@ -12,7 +12,6 @@ import UIKit
 //let cup = CGRect(x: UIScreen.main.bounds.width*1.0/3, y: UIScreen.main.bounds.height*1/5, width: UIScreen.main.bounds.width*1.0/3, height: UIScreen.main.bounds.height*3/5)
 //let myView = UIView(frame: cup);
 
-
 class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     
     let frameY = Double(UIScreen.main.bounds.height*1/5)
@@ -40,13 +39,13 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     override init(frame: CGRect) {
         
         super.init(frame: CGRect(x: frameX, y: frameY, width: frameWidth, height: frameHeight))
-        self.backgroundColor = UIColor.black
+        self.backgroundColor = UIColor.white
         
-        bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
-        milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
-        tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
-        top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
-        ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        bot = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        milk = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        tea = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        top = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
+        ice = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: currHeight))
         
     }
     
@@ -69,7 +68,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             icePercent = (percent / 100.0)
             count = 5;
             
-            ice = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*icePercent)))
+            ice = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*icePercent)))
             
             ice.backgroundColor = fillColor
         case 4:
@@ -78,7 +77,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             topPercent = (percent / 100.0)
             count = 4;
             
-            top = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*topPercent)))
+            top = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*topPercent)))
             
             top.backgroundColor = fillColor
         case 3:
@@ -87,7 +86,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             teaPercent = (percent / 100.0)
             count = 3;
             
-            tea = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*teaPercent)))
+            tea = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*teaPercent)))
             
             tea.backgroundColor = fillColor
         case 2:
@@ -96,7 +95,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             milkPercent = (percent / 100.0)
             count = 2;
             
-             milk = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*milkPercent)))
+             milk = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight, width: frameWidth, height: (frameHeight*milkPercent)))
             
             milk.backgroundColor = fillColor
         case 1:
@@ -105,7 +104,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             botPercent = (percent / 100.0)
             count = 1;
             
-            bot = UIView(frame: CGRect(x: frameX, y: frameY + frameHeight - (frameHeight*botPercent), width: frameWidth, height: (frameHeight*botPercent)))
+            bot = AbedView(frame: CGRect(x: frameX, y: frameY + frameHeight - (frameHeight*botPercent), width: frameWidth, height: (frameHeight*botPercent)))
             
             bot.backgroundColor = fillColor
         default:
@@ -117,7 +116,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     }
     
     override func draw(_ frame: CGRect){
-        super.draw(self.frame);
+        super.draw(frame);
         
         currHeight = (botPercent)*frameHeight
         currY = currY-currHeight
@@ -157,7 +156,6 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
             self.insertSubview(ice, aboveSubview: top)
         
     }
-    
     
     
 }

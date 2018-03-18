@@ -43,7 +43,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     
     // put setValues in here to run
     func setPearlButton() {
-        pearlButton = UIButton(frame: CGRect(x: ChoicesViewController.width / 12.0, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
+        pearlButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width / 12.0, y: UIScreen.main.bounds.height / 7.0, width: UIScreen.main.bounds.width / 5.0, height: UIScreen.main.bounds.height / 7.0))
         pearlButton.backgroundColor = UIColor.blue
         pearlButton.layer.cornerRadius = 3.0
         pearlButton.setTitle("Pearls", for: .normal)
@@ -52,7 +52,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     }
     
     func setAiyuButton() {
-        aiyuButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 9 / 12, y: ChoicesViewController.height * 4 / 7.0, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
+        aiyuButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width * 9 / 12, y: UIScreen.main.bounds.height * 4 / 7.0, width: UIScreen.main.bounds.width / 5.0, height: UIScreen.main.bounds.height / 7.0))
         aiyuButton.backgroundColor = UIColor.blue
         aiyuButton.layer.cornerRadius = 3.0
         aiyuButton.setTitle("Ai-yu", for: .normal)
@@ -60,7 +60,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
         self.view.addSubview(aiyuButton)
     }
     func setPuddingButton() {
-        puddingButton = UIButton(frame: CGRect(x: ChoicesViewController.width * 9 / 12, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
+        puddingButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width * 9 / 12, y: UIScreen.main.bounds.height / 7.0, width: UIScreen.main.bounds.width / 5.0, height: UIScreen.main.bounds.height / 7.0))
         puddingButton.backgroundColor = UIColor.blue
         puddingButton.layer.cornerRadius = 3.0
         puddingButton.setTitle("Pudding", for: .normal)
@@ -68,7 +68,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
         self.view.addSubview(puddingButton)
     }
     func setJellyButton() {
-        jellyButton = UIButton(frame: CGRect(x: ChoicesViewController.width / 12, y: ChoicesViewController.height * 4 / 7, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
+        jellyButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.width / 12, y: UIScreen.main.bounds.height * 4 / 7, width: UIScreen.main.bounds.width / 5.0, height: UIScreen.main.bounds.height / 7.0))
         jellyButton.backgroundColor = UIColor.blue
         jellyButton.layer.cornerRadius = 3.0
         jellyButton.setTitle("Jelly", for: .normal)

@@ -27,7 +27,7 @@ class TopViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
         self.navigationItem.rightBarButtonItem = addEntryButton
         
         // Add the view to the view hierarchy so that it shows up on screen
-        self.view.addSubview(cup)
+        self.view.addSubview(cup1)
     }
     
     override func viewWillAppear(_ animated: Bool) {

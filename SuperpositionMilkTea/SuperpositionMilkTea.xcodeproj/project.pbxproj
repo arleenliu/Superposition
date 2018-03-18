@@ -21,6 +21,7 @@
 		C0CFC18E205E205A00C39B74 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC18D205E205A00C39B74 /* TopViewController.swift */; };
 		C0CFC192205E638200C39B74 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC191205E638200C39B74 /* LogoutViewController.swift */; };
 		C0CFC194205E639B00C39B74 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC193205E639B00C39B74 /* SettingsViewController.swift */; };
+		C0CFC19C205EC05100C39B74 /* AbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFC19B205EC05100C39B74 /* AbedView.swift */; };
 		FA633D7C205DFC03008729B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D7B205DFC03008729B6 /* AppDelegate.swift */; };
 		FA633D7E205DFC03008729B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA633D7D205DFC03008729B6 /* ViewController.swift */; };
 		FA633D81205DFC03008729B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA633D7F205DFC03008729B6 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		C0CFC18D205E205A00C39B74 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		C0CFC191205E638200C39B74 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		C0CFC193205E639B00C39B74 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C0CFC19B205EC05100C39B74 /* AbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbedView.swift; sourceTree = "<group>"; };
 		FA633D78205DFC03008729B6 /* SuperpositionMilkTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperpositionMilkTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA633D7B205DFC03008729B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA633D7D205DFC03008729B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C0B97BAC205E1A7900A5B719 /* ConfirmViewController.swift */,
 				C0B97BAA205E1A7900A5B719 /* InitChoiceViewController.swift */,
 				FAFE20C5205E169A00DB166D /* CupView.swift */,
+				C0CFC19B205EC05100C39B74 /* AbedView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B97BB3205E1A7900A5B719 /* TabViewController.swift in Sources */,
+				C0CFC19C205EC05100C39B74 /* AbedView.swift in Sources */,
 				C0CFC18C205E204500C39B74 /* MilkViewController.swift in Sources */,
 				FA633D7E205DFC03008729B6 /* ViewController.swift in Sources */,
 				C0CFC18A205E202E00C39B74 /* IceViewController.swift in Sources */,
