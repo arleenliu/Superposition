@@ -9,10 +9,28 @@
 import Foundation
 import UIKit
 
-class MilkViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class MilkViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Milk"
+        
+        super.setNextViewController(nextVC: TeaViewController())
+        
+        
+        // Add the view to the view hierarchy so that it shows up on screen
+        self.view.addSubview(ChoicesViewController.getCup())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.addSubview(ChoicesViewController.getCup()) // maybe?
+    }
+    
+    override func sliderValueChanged(_ sender: UISlider!) {
+        super.sliderValueChanged(<#T##sender: UISlider!##UISlider!#>)
+        
+        ChoicesViewController.setValues(percent: Double(sender.value), vc: self)
+        
+    }
 }

@@ -9,17 +9,54 @@
 import Foundation
 import UIKit
 
-
-var cupObject = CupView()
-class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class BotViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+    
+    init() {
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    var pearlButton : UIButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blueColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 255/255.0, alpha: 1.0)
-        blueColor.setFill()
-        cupObject.draw(CGRect(x: UIScreen.main.bounds.width*1.0/3, y: UIScreen.main.bounds.height*1/5, width: UIScreen.main.bounds.width*1.0/3, height: UIScreen.main.bounds.height*3/5))
+        self.title = "Bottom Choice"
+        pearlButton = UIButton(frame: CGRect(x: super.width / 5.0, y: super.height / 7.0, width: super.width / 5.0, height: super.height / 7.0))
+        setPearlButton()
+        
+        super.setNextViewController(nextVC: MilkViewController())
+        
+        
+        // Add the view to the view hierarchy so that it shows up on screen
+        self.view.addSubview(ChoicesViewController.getCup())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.addSubview(ChoicesViewController.getCup()) // maybe?
+    }
     
+    // put setValues in here to run
+    func setPearlButton() {
+//        let pearlButton = UIButton(frame: CGRect(x: super.width / 5.0, y: super.height / 7.0, width: super.width / 5.0, height: super.height / 7.0))
+        pearlButton.backgroundColor = UIColor.yellow
+        pearlButton.layer.cornerRadius = 3.0
+        pearlButton.setTitle("Pearls", for: .normal)
+        pearlButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        self.view.addSubview(pearlButton)
+    }
+    
+    @objc func buttonTapped() {
+        pearlButton.backgroundColor = UIColor.orange
+    }
+    
+    override func sliderValueChanged(_ sender: UISlider!) {
+        super.sliderValueChanged(<#T##sender: UISlider!##UISlider!#>)
+        
+        ChoicesViewController.setValues(percent: Double(sender.value), vc: self)
+        
+    }
     
 }

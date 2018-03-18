@@ -42,7 +42,7 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
     
     
     // call each time cup is used
-    func setValues(percent: Double, color: UIColor, vc: UIViewController) {
+    func setValues(percent: Double, vc: UIViewController) {
         
         switch vc {
         case is IceViewController:
