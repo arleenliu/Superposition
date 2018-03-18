@@ -11,8 +11,10 @@ import UIKit
 
 class ChoicesViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
+    public let height = UIScreen.main.bounds.height
+    public let width = UIScreen.main.bounds.width
     var nextVC: UIViewController = UIViewController()
-    static let cup: CupView = CupView();
+    public static let cup = CupView(frame: CGRect(x: UIScreen.main.bounds.width*1.0/3, y: UIScreen.main.bounds.height*1/5, width: UIScreen.main.bounds.width*1.0/3, height: UIScreen.main.bounds.height*3/5))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +28,12 @@ class ChoicesViewController : UIViewController /*UITableViewDelegate, UITableVie
         self.navigationItem.rightBarButtonItem = addEntryButton
     }
     
-    static func sharedDelegate(c: CupView) -> UIView {
-        return cup
+    static func getCup() -> CupView {
+        return cup;
+    }
+    
+    static func setValues(percent: Double, vc: UIViewController) {
+        cup.setValues(percent: percent, vc: vc)
     }
     
     // call first in subclasses
@@ -46,8 +52,8 @@ class ChoicesViewController : UIViewController /*UITableViewDelegate, UITableVie
     }
     
     @objc func sliderValueChanged(_ sender: UISlider!) {
-       // let roundedValue = round(sender.value)
-       // sender.value = roundedValue
+    //    let roundedValue = round(sender.value)
+    //    sender.value = roundedValue
     }
     
     @objc private func addEntryAction() {
