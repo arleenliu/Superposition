@@ -51,15 +51,16 @@ class CupView : UIView /*UITableViewDelegate, UITableViewDataSource*/ {
         super.init(coder: aDecoder)
     }
     
-    func getCup() -> CupView {
-        return self;
-    }
+//    static func getCup() -> CupView {
+//        return CupView();
+//    }
     
     // call each time cup is used
-    func setValues(percent: Double, vc: UIViewController) {
+   func setValues(percent: Double, vc: UIViewController) {
         
         switch vc {
         case is IceViewController:
+            print("working")
             fillColor = UIColor.purple
             fillColor.setFill()
             icePercent = (percent / 100.0)

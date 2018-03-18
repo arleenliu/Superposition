@@ -13,7 +13,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     
     var pearlButton = UIButton()
     var jellyButton = UIButton()
-    var cup = CupView()
+    var cup1 = CupView()
     var aiyuButton = UIButton()
     var puddingButton = UIButton()
     
@@ -33,12 +33,12 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
         self.navigationItem.rightBarButtonItem = addEntryButton
         
         // Add the view to the view hierarchy so that it shows up on screen
-        self.view.addSubview(cup.getCup())
+        self.view.addSubview(cup1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.addSubview(cup.getCup()) // maybe?
+        self.view.addSubview(cup1) // maybe?
     }
     
     // put setValues in here to run
@@ -80,7 +80,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     
     @objc private func addEntryAction() {
         let entryViewController = MilkViewController()
-        entryViewController.setCup(cv: cup)
+        entryViewController.setCup(cv: cup1)
         navigationController?.pushViewController(entryViewController, animated: true)
     }
     
@@ -99,7 +99,7 @@ class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDat
     }
     
     @objc func sliderValueChanged(_ sender: UISlider!) {
-        cup.setValues(percent: Double(sender.value), vc: self)
+        cup1.setValues(percent: Double(sender.value), vc: self)
         
     }
     
