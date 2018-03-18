@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var rootNavigationController = UINavigationController(rootViewController:rootViewController)
         var detailNavigationController = UINavigationController(rootViewController:detailViewController)
-        splitViewController.viewControllers = [detailNavigationController,rootNavigationController]
+        splitViewController.viewControllers = [rootViewController,detailViewController]
         self.window!.rootViewController = splitViewController
         
             
