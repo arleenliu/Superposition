@@ -9,31 +9,35 @@
 import Foundation
 import UIKit
 
-class BotViewController : ChoicesViewController /*UITableViewDelegate, UITableViewDataSource*/ {
+class BotViewController : UIViewController /*UITableViewDelegate, UITableViewDataSource*/ {
     
     var pearlButton = UIButton()
+    var cup = CupView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Bottom Choice"
-        pearlButton = UIButton(frame: CGRect(x: super.width / 5.0, y: super.height / 7.0, width: super.width / 5.0, height: super.height / 7.0))
+        self.view.backgroundColor = UIColor.white
         setPearlButton()
+        setupSlider()
         
-        super.setNextViewController(nextVC: MilkViewController())
+        let addEntryButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle .plain, target: self, action: #selector(addEntryAction))
         
+        // UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addEntryAction))
+        self.navigationItem.rightBarButtonItem = addEntryButton
         
         // Add the view to the view hierarchy so that it shows up on screen
-        self.view.addSubview(ChoicesViewController.getCup())
+        self.view.addSubview(cup.getCup())
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.addSubview(ChoicesViewController.getCup()) // maybe?
+        self.view.addSubview(cup.getCup()) // maybe?
     }
     
     // put setValues in here to run
     func setPearlButton() {
-//        let pearlButton = UIButton(frame: CGRect(x: super.width / 5.0, y: super.height / 7.0, width: super.width / 5.0, height: super.height / 7.0))
+        pearlButton = UIButton(frame: CGRect(x: ChoicesViewController.width / 5.0, y: ChoicesViewController.height / 7.0, width: ChoicesViewController.width / 5.0, height: ChoicesViewController.height / 7.0))
         pearlButton.backgroundColor = UIColor.yellow
         pearlButton.layer.cornerRadius = 3.0
         pearlButton.setTitle("Pearls", for: .normal)
@@ -41,14 +45,28 @@ class BotViewController : ChoicesViewController /*UITableViewDelegate, UITableVi
         self.view.addSubview(pearlButton)
     }
     
+    @objc private func addEntryAction() {
+        let entryViewController = MilkViewController()
+        entryViewController.setCup(cv: cup)
+        navigationController?.pushViewController(entryViewController, animated: true)
+    }
+    
     @objc func buttonTapped() {
         pearlButton.backgroundColor = UIColor.orange
     }
     
-    override func sliderValueChanged(_ sender: UISlider!) {
-        super.sliderValueChanged(sender)
-        
-        ChoicesViewController.setValues(percent: Double(sender.value), vc: self)
+    func setupSlider() {
+        let slider = UISlider(frame: CGRect(x: 50, y: 550, width: 280, height: 20))
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        slider.isContinuous = true
+        slider.value = 0
+        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        self.view.addSubview(slider)
+    }
+    
+    @objc func sliderValueChanged(_ sender: UISlider!) {
+        cup.setValues(percent: Double(sender.value), vc: self)
         
     }
     
